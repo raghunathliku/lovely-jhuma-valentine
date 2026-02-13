@@ -7,7 +7,7 @@ function App() {
   const [typedText, setTypedText] = useState("");
   const [hearts, setHearts] = useState([]);
 
-  const fullText = `Happy Valentine’s Day ${sname} ❤️`;
+  const fullText = `Happy Valentine’s Day My ${sname} ❤️`;
 
   useEffect(() => {
     let i = 0;
