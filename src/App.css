@@ -1,0 +1,128 @@
+.valentine-bg {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  overflow-x: hidden;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+/* Typing Title */
+.typing-title {
+  font-size: 28px;
+  margin-bottom: 30px;
+  font-family: cursive;
+  min-height: 40px;
+}
+
+/* Cards */
+.valentine-card {
+  width: 95%;
+  max-width: 350px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 15px;
+  margin: 20px 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: 0.4s;
+}
+
+.valentine-card:hover {
+  transform: translateY(-8px);
+}
+
+.valentine-card img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.valentine-card h3 {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Floating Hearts Background */
+.floating-hearts::before {
+  content: "❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️";
+  position: absolute;
+  width: 100%;
+  font-size: 22px;
+  animation: floatHearts 12s linear infinite;
+  opacity: 0.4;
+}
+
+@keyframes floatHearts {
+  0% { transform: translateY(100vh); }
+  100% { transform: translateY(-100vh); }
+}
+
+/* Button */
+.love-btn {
+  margin: 30px 0;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  background: white;
+  color: #ff4d6d;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.love-btn:hover {
+  background: #ff4d6d;
+  color: white;
+}
+
+/* Popup */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  background: white;
+  color: #ff4d6d;
+  padding: 25px;
+  border-radius: 20px;
+  width: 85%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.popup button {
+  margin-top: 15px;
+  padding: 8px 20px;
+  border: none;
+  background: #ff4d6d;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* Heart Explosion */
+.explode-heart {
+  position: fixed;
+  font-size: 22px;
+  animation: explode 1s ease-out forwards;
+}
+
+@keyframes explode {
+  0% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: translateY(-100px) scale(2); }
+}
